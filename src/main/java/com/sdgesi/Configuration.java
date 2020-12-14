@@ -1,4 +1,4 @@
-package org.acme.commandmode;
+package com.sdgesi;
 
 import io.quarkus.arc.config.ConfigProperties;
 import lombok.Data;

@@ -1,4 +1,4 @@
-package org.acme.commandmode;
+package com.sdgesi;
 
 import com.mongodb.MongoNamespace;
 import com.mongodb.client.MongoClient;
@@ -9,10 +9,7 @@ import com.mongodb.client.model.RenameCollectionOptions;
 import io.quarkus.runtime.QuarkusApplication;
 import io.quarkus.runtime.annotations.QuarkusMain;
 import org.apache.camel.CamelContext;
-import org.bson.BsonDocument;
 import org.bson.Document;
-import org.bson.codecs.configuration.CodecRegistry;
-import org.bson.conversions.Bson;
 
 import javax.inject.Inject;
 

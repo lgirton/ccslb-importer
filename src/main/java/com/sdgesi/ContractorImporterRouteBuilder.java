@@ -1,4 +1,4 @@
-package org.acme.commandmode;
+package com.sdgesi;
 
 import org.apache.camel.AggregationStrategy;
 import org.apache.camel.Exchange;

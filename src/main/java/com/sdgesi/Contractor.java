@@ -1,4 +1,4 @@
-package org.acme.commandmode;
+package com.sdgesi;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
