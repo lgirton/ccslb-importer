@@ -1,17 +1,15 @@
 package com.sdgesi;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import io.quarkus.runtime.annotations.RegisterForReflection;
+import lombok.*;
 import org.apache.camel.dataformat.bindy.annotation.CsvRecord;
 import org.apache.camel.dataformat.bindy.annotation.DataField;
 
-@Data
 @NoArgsConstructor
-@AllArgsConstructor
-@Builder
 @CsvRecord(separator = ",", skipFirstLine = false)
+@RegisterForReflection
+@Getter
+@Setter
 public class Contractor {
 
     @DataField(pos=1)

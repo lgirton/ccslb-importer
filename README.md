@@ -1,8 +1,27 @@
-# ccslb-importer project
+# California Contractor State License Board Import Application
+## Overview
+This application is retrieves License Contractor information through a REST API at 
+[CCSLB Contractor Listing](https://www.cslb.ca.gov/OnlineServices/DataPortal/DownLoadFile.ashx?fName=MasterLicenseData&type=C)
+and loads the information into a MongoDB instance.  At the time of writing this, there were approx. 290,000 licensed
+contractors in the state of California.  This is intended to be run as a CRON Batch Job that is infrequently 
+run to cache information that would be used another service that would expose a REST API to search for California 
+contractor information.
 
-This project uses Quarkus, the Supersonic Subatomic Java Framework.
+Below are the semantic stages of the processing flow:
 
-If you want to learn more about Quarkus, please visit its website: https://quarkus.io/ .
+* Initialize
+* Extract
+* Transform
+* Load
+* Cleanup
+
+And corresponding diagram:
+
+![alt text](Pipeline.png)
+
+This project uses Quarkus, the Supersonic Subatomic Java Framework and Camel Quarkus extensions.
+
+If you want to learn more about Quarkus, please visit its website: https://quarkus.io/.
 
 ## Running the application in dev mode
 
@@ -42,10 +61,3 @@ Or, if you don't have GraalVM installed, you can run the native executable build
 You can then execute your native executable with: `./target/ccslb-importer-1.0.0-SNAPSHOT-runner`
 
 If you want to learn more about building native executables, please consult https://quarkus.io/guides/maven-tooling.html.
-
-# Command Mode
-
-Guide: https://quarkus.io/guides/command-mode-reference
-
-# California Contractor State License Board
-[Data File](https://www.cslb.ca.gov/OnlineServices/DataPortal/DownLoadFile.ashx?fName=MasterLicenseData&type=C)
